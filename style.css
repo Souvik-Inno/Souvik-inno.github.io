@@ -23,7 +23,7 @@ body{
 }
 
 .section-content {
-    padding: 50px 120px;
+    padding: 10% 10%;
     /* padding: 10% 10%; */
 }
 
@@ -63,7 +63,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: #fbfaff;
-    padding: 0 120px;
+    padding: 0 10%;
     max-width: 1600px;
     width: 100%;
     /* width: 1600px; */
@@ -73,6 +73,8 @@ header {
     display: flex;
     height: 62px;
 }
+
+/* .head-content--nav{} */
 
 .head-content--nav ul {
     display: flex;
@@ -94,6 +96,17 @@ header {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .head-content--nav{
+        display: none;
+    }
+    .head-content{
+        flex-direction: column;
+    }
+    .head-content--nav ul {
+        flex-direction: column;
+    }
+}
 
 
 /* section1 */
@@ -102,7 +115,7 @@ header {
     background: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)),  url('images/img-1.jpg');
     background-position: center;
     background-size: cover;
-    height: 700px;
+    min-height: 700px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -149,6 +162,12 @@ header {
     gap: 20px;
 }
 
+@media only screen and (max-width: 600px){
+    .intro-content--buttons{
+        flex-direction: column;
+    }
+}
+
 .intro-button:hover {
     background-color: #d0a904;
     border-color: #d0a904;
@@ -192,7 +211,7 @@ header {
     /* float: left; */
     padding-right: 20px;
     width: 40%;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 .hello-world-text-part p{
@@ -222,8 +241,18 @@ header {
 } */
 
 .hello-world-image {
-    width: 60%;
+    width: calc(60% - 20px);
     object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .hello-world-content-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .hello-world-image{
+        width: 80%;
+    }
 }
 
 /* services */
@@ -231,7 +260,7 @@ header {
     background-image: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)), url('images/img-2.jpg');
     background-position: center;
     background-size: 125%;
-    height: 650px;
+    /* height: 650px; */
     /* max-width: 1600px; */
 
 }
@@ -275,6 +304,15 @@ header {
 .services-columns-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px){
+    .services-columns-wrapper{
+        flex-direction: column;
+    }
+    .services-columns{
+        width: 100%;
+    }
 }
 
 .services-button {
@@ -344,9 +382,15 @@ header {
     gap: 10px;
 }
 
+@media only screen and (max-width: 600px){
+    .designs-gallery{
+        flex-direction: column;
+    }
+}
+
 .designs-gallery-image--skateboard {
     height: 600px;
-    width: 450px;
+    width: 100%;
     /* width: 28vw; */
     padding: 10px 10px;
     object-fit: cover;
@@ -354,7 +398,7 @@ header {
 
 .designs-gallery-image--book {
     height: 300px;
-    width: 450px;
+    width: 100%;
     /* width: 28vw; */
     padding: 10px 10px;
     object-fit: cover;
@@ -438,7 +482,7 @@ header {
     background-image: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)), url('images/img-4.jpg');
     background-position: center;
     background-size: 100%;
-    height: 400px;
+    /* height: 400px; */
     /* max-width: 1600px; */
 }
 
@@ -475,6 +519,12 @@ header {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+    .accomplishment-content{
+        flex-direction: column;
+    }
+}
+
 /* pricing-plans */
 .pricing-plans {
     text-align: center;
@@ -497,7 +547,7 @@ header {
 .pricing-plans-card {
     border-style: ridge;
     border-width: 1.5px;
-    height: 450px;
+    /* height: 450px; */
     width: 420px;
     padding: 30px 40px;
     background-color: white;
@@ -505,6 +555,11 @@ header {
     color: rgb(82, 69, 97);
 }
 
+@media only screen and (max-width: 600px) {
+    .pricing-plans-content--cards{
+        flex-direction: column;
+    }
+}
 
 .pricing-plans-trial--features p{
     padding: 8px 0;
@@ -561,7 +616,8 @@ h4 span{
     background-image: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)), url('images/img-3.jpg');
     background-position: center;
     background-size: 100%;
-    height: 500px;
+    min-height: 500px;
+    /* height: fit-content; */
 }
 
 .testimonials-content-area {
@@ -573,7 +629,8 @@ h4 span{
 }
 
 .testimonials-content {
-    width: 1600px;
+    width: 100%;
+    height: 100%;
 }
 
 .testimonials-heading {
@@ -601,12 +658,19 @@ h4 span{
     border-radius: 100px;
 }
 
+.testimonials-body-names{
+    display: flex;
+    padding-top: 30px;
+}
+
+
+
 .testimonials-body-names--left {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    width: 40%;
 }
 
 .testimonials-body-names--left p{
@@ -619,7 +683,8 @@ h4 span{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
+    /* width: 500px; */
+    width: 40%;
     /* text-align: center; */
 }
 
@@ -635,6 +700,21 @@ h4 span{
     align-items: stretch;
 }
 
+@media only screen and (max-width: 600px) {
+    .testimonials-body-names{
+        flex-direction: column;
+        /* width: 100%; */
+    }
+    .testimonials{
+        min-height: 800px;
+    }
+    .testimonials-body-names--left{
+        width: 100%;
+    }
+    .testimonials-body-names--right{
+        width: 100%;
+    }
+}
 
 /* blog-post */
 .blog-post {
@@ -661,6 +741,12 @@ h4 span{
     display: flex;
     column-gap: 15px;
     max-width: 1600px;
+}
+
+@media only screen and (max-width: 600px){
+    .blog-post-card-container{
+        flex-direction: column;
+    }
 }
 
 .blog-post-card {
@@ -702,11 +788,11 @@ h4 span{
 /* footer */
 footer {
     background-color: #3a376c;
-    height: 400px;
+    /* height: 400px; */
     color: white;
     display: flex;
     justify-content: center;
-    padding: 0 120px;
+    padding: 0 10%;
 
 }
 
@@ -716,7 +802,7 @@ footer h2{
 
 .footer-content-area {
     max-width: 1600px;
-    width: 1600px;
+    width: 100%;
 
 }
 
@@ -730,6 +816,12 @@ footer h2{
     /* height: 200px; */
     justify-content: space-between;
     align-items: flex-start;
+}
+
+@media only screen and (max-width: 600px){
+    .footer-columns{
+        flex-direction: column;
+    }
 }
 
 .footer-columns--content h2 {
