@@ -24,6 +24,7 @@ body{
 
 .section-content {
     padding: 50px 120px;
+    /* padding: 10% 10%; */
 }
 
 h1 {
@@ -50,21 +51,22 @@ h4{
 /* header */
 
 header {
-    max-width: 1600px;
+    /* max-width: 1600px; */
     display: flex;
-    /* width: 100%; */
-    /* width: 1600px; */
     justify-content: center;
+    /* position: fixed;
+    width: 100%;
+    z-index: 10; */
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     background-color: #fbfaff;
-    /* padding: 0 10%; */
     padding: 0 120px;
-    /* max-width: 1600px; */
     max-width: 1600px;
+    width: 100%;
+    /* width: 1600px; */
 }
 
 .head-content--image {
@@ -97,20 +99,20 @@ header {
 /* section1 */
 
 .intro {
-    background: url('images/img-1.jpg');
+    background: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)),  url('images/img-1.jpg');
     background-position: center;
     background-size: cover;
     height: 700px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .intro-content-area {
     color: white;
     text-align: center;
-    /* min-height: 700px; */
     height: 100%;
-    background-color: rgba(10, 12, 43, 0.82);
-    /* font-size: 22px; */
-    font-family: 'Open Sans', sans-serif;
+    /* width: 100%; */
 }
 
 .intro-content {
@@ -118,11 +120,14 @@ header {
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    padding: 0 250px;
+    align-items: center;
+    /* padding: 0 250px; */
+    max-width: 900px;
 }
 
 .intro-content p{
-    padding: 30px 280px 0 280px;
+    padding: 15px 0;
+    max-width: 500px;
     color: rgba(202, 200, 200, 0.938);
 }
 
@@ -154,7 +159,8 @@ header {
     /* padding-top: 70px; */
     position: relative;
     bottom: -120px;
-    padding-left: calc(50% - 16.5px);
+    padding-right: 16.5px;
+    /* padding-left: calc(50% - 16.5px); */
     /* display: flex;
     justify-content: center; */
 }
@@ -217,12 +223,12 @@ header {
 
 .hello-world-image {
     width: 60%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 /* services */
 .services {
-    background-image: url('images/img-2.jpg');
+    background-image: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)), url('images/img-2.jpg');
     background-position: center;
     background-size: 125%;
     height: 650px;
@@ -238,7 +244,7 @@ header {
     color: white;
     text-align: center;
     height: 100%;
-    background-color: rgba(10, 12, 43, 0.82);
+    /* background-color: rgba(10, 12, 43, 0.82); */
 
     display: flex;
     justify-content: center;
@@ -247,7 +253,7 @@ header {
 
 .services-content {
     max-width: 1600px;
-    width: 1600px;
+    width: 100%;
 
 }
 
@@ -257,7 +263,8 @@ header {
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
-    width: 300px;
+    /* width: 300px; */
+    width: 30%;
     color: rgba(202, 200, 200, 0.938);
 }
 
@@ -340,6 +347,7 @@ header {
 .designs-gallery-image--skateboard {
     height: 600px;
     width: 450px;
+    /* width: 28vw; */
     padding: 10px 10px;
     object-fit: cover;
 }
@@ -347,6 +355,7 @@ header {
 .designs-gallery-image--book {
     height: 300px;
     width: 450px;
+    /* width: 28vw; */
     padding: 10px 10px;
     object-fit: cover;
 }
@@ -426,7 +435,7 @@ header {
 
 /* accomplishment */
 .accomplishment {
-    background-image: url('images/img-4.jpg');
+    background-image: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)), url('images/img-4.jpg');
     background-position: center;
     background-size: 100%;
     height: 400px;
@@ -437,7 +446,7 @@ header {
     color: white;
     text-align: center;
     height: 100%;
-    background-color: rgba(10, 12, 43, 0.82);
+    /* background-color: rgba(10, 12, 43, 0.82); */
     display: flex;
     justify-content: center;
 }
@@ -549,7 +558,7 @@ h4 span{
 
 /* testimonials */
 .testimonials {
-    background-image: url('images/img-3.jpg');
+    background-image: linear-gradient(rgba(10, 12, 43, 0.82), rgba(10, 12, 43, 0.82)), url('images/img-3.jpg');
     background-position: center;
     background-size: 100%;
     height: 500px;
@@ -558,7 +567,7 @@ h4 span{
 .testimonials-content-area {
     color: white;
     height: 100%;
-    background-color: rgba(10, 12, 43, 0.82);
+    /* background-color: rgba(10, 12, 43, 0.82); */
     display: flex;
     justify-content: center;
 }
