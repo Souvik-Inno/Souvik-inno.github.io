@@ -529,7 +529,7 @@ header {
     justify-content: space-between;
     align-items: center;
     max-width: 1600px;
-    width: 1600px;
+    width: 100%;
 }
 
 .accomplishment-column {
@@ -734,7 +734,7 @@ h4 span{
         /* width: 100%; */
     }
     .testimonials{
-        min-height: 800px;
+        min-height: 900px;
     }
     .testimonials-body-names--left{
         width: 100%;
