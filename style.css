@@ -11,6 +11,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .section-icon {
@@ -106,7 +107,7 @@ header {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 770px) {
     .head-content--nav{
         display: none;
     }
@@ -143,12 +144,14 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
+
 }
 
 .intro-content-area {
     color: white;
     text-align: center;
     height: 100%;
+    width: 100%
     /* width: 100%; */
 }
 
@@ -406,11 +409,7 @@ header {
     gap: 10px;
 }
 
-@media only screen and (max-width: 600px){
-    .designs-gallery{
-        flex-direction: column;
-    }
-}
+
 
 .designs-gallery-image--skateboard {
     height: 600px;
@@ -499,6 +498,15 @@ header {
 
 .gg-math-plus{
     scale: 1.5;
+}
+
+@media only screen and (max-width: 600px){
+    .designs-gallery{
+        flex-direction: column;
+    }
+    .designs-gallery--column {
+        width: 100%;
+    }
 }
 
 /* accomplishment */
@@ -774,14 +782,10 @@ h4 span{
     max-width: 1600px;
 }
 
-@media only screen and (max-width: 600px){
-    .blog-post-card-container{
-        flex-direction: column;
-    }
-}
+
 
 .blog-post-card {
-    width: 430px;
+    width: 33%;
     height: 570px;
     background-color: white;
     position: relative;
@@ -789,6 +793,7 @@ h4 span{
     border-width: 1.5px;
     /* min-width: 400px; */
 }
+
 
 .blog-post-card-text {
     padding: 40px;
@@ -804,7 +809,7 @@ h4 span{
     bottom: 20px;
     /* transform: translate(50%, 50%); */
     height: 50px;
-    width: 200px;
+    width: 60%;
     border-radius: 20px;
     background-color: white;
 }
@@ -814,6 +819,18 @@ h4 span{
     border-color: #d0a904;
     color: white;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 680px){
+    .blog-post-card-container{
+        flex-direction: column;
+    }
+    .blog-post-card{
+        width: 100%;
+    }
+    .blog-post-card-button{
+        width: 40%;
+    }
 }
 
 /* footer */
@@ -847,6 +864,7 @@ footer h2{
     /* height: 200px; */
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 600px){
