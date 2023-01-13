@@ -145,6 +145,7 @@ header {
     :root{
         --h1font: 30px;
         --h2font: 25px;
+        font-size: 0.7rem;
     }
 }
 
@@ -166,8 +167,9 @@ header {
     color: white;
     text-align: center;
     height: 100%;
-    width: 100%
-    /* width: 100%; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .intro-content {
