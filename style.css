@@ -9,9 +9,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --h1font: 60px;
+    --h2font: 50px;
+    --h3font: 30px;
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    
 }
 
 .section-icon {
@@ -30,20 +37,20 @@ body{
 }
 
 h1 {
-    font-size: 60px;
+    font-size: var(--h1font);
     font-weight: 100;
     font-family: 'Open Sans', sans-serif;
     /* font-family: 'Noto Serif Display', serif; */
 }
 
 h2{
-    font-size: 50px;
+    font-size: var(--h2font);
     font-weight: 100;
     font-family: 'Open Sans', sans-serif;
 }
 
 h3{
-    font-size: 30px;
+    font-size: var(--h3font);
 }
 
 h4{
@@ -119,18 +126,26 @@ header {
     }
     .res-menu{
         display: flex;
+        z-index: 10;
     }
     .res-menu:hover{
         cursor: pointer;
     }
-    /* .res-menu:hover, .head-res-nav{
-        display: flex;
+    .head-res-nav{
+        display: none;
+        position: absolute;
+        top: 16px;
+        left: -25px;
     }
     .head-res-nav ul{
         list-style-type: none;
         padding: 5px;
         background-color: rgba(145, 124, 10, 0.82);
-    } */
+    }
+    :root{
+        --h1font: 30px;
+        --h2font: 25px;
+    }
 }
 
 
@@ -230,6 +245,7 @@ header {
 
 .hello-world-content-area {
     max-width: 1600px;
+    width: 100%;
     display: flex;
     color: rgb(27, 4, 36);
 }
@@ -588,12 +604,29 @@ header {
     color: rgb(82, 69, 97);
 }
 
+.pricing-plans-card--heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 60px; */
+}
+
+
+@media only screen and (max-width: 1000px){
+    .pricing-plans-card--heading{
+        height: 70px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .pricing-plans-content--cards{
         flex-direction: column;
     }
     .pricing-plans-card{
         width: 100%;
+    }
+    .pricing-plans-card {
+        font-size: 20px;
     }
 }
 
@@ -699,8 +732,6 @@ h4 span{
     padding-top: 30px;
 }
 
-
-
 .testimonials-body-names--left {
     display: flex;
     flex-direction: column;
@@ -786,7 +817,7 @@ h4 span{
 
 .blog-post-card {
     width: 33%;
-    height: 570px;
+    /* height: 570px; */
     background-color: white;
     position: relative;
     border-style: ridge;
@@ -804,10 +835,10 @@ h4 span{
 }
 
 .blog-post-card-button {
-    position: absolute;
-    left: 40px;
-    bottom: 20px;
+    /* position: absolute; */
+    margin-left: 7%;
     /* transform: translate(50%, 50%); */
+    margin-bottom: 2%;
     height: 50px;
     width: 60%;
     border-radius: 20px;
